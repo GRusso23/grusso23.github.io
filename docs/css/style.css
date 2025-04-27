@@ -1,3 +1,68 @@
-h1{
-    color: red;
+body { /*Formato global para el cuerpo*/
+    font-family: 'Century Gothic', 'Arial', sans-serif;
+    background-color: #c9e4ca;
+    font-size: 1.1rem;
+} 
+
+a {/*Formato global para vínculos*/
+    font-family: 'Century Gothic', 'Arial', sans-serif;
+}
+
+.nav-link { /*Formato para vínculos del navegador*/
+    font-size: 1.1rem;
+}
+
+.barra-titulo { /*Formato para barra de título*/
+    background-color: #55828b;
+    padding: 1.5rem 0;
+}
+
+.barra-titulo h1 { /*Formato para título de página*/
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.tabla-materias { /*Formato tabla página de inicio */
+    margin: 2rem auto;
+    border-spacing: 0;
+    border: 2px solid #3b6064;
+    text-align: center;
+}
+
+.tabla-materias th, .tabla-materias td { /*Bordes y espaciado internos */
+    border: 1.5px solid #3b6064; 
+    padding: 0.75rem 1rem; 
+}
+
+/* Optional: style header row different color */
+.tabla-materias th {
+    background-color: #55828b;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) { /* Adaptar texto de cuerpo para pantallas chicas */
+    body {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) { /* Adaptar texto de cuerpo para pantallas muy chicas */
+    body {
+        font-size: 0.8rem; 
+    }
+}
+
+@media (max-width: 768px) { /* Adaptar texto de navegador para pantallas chicas */
+    .nav-link {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 480px) { /* Adaptar texto de navegador para pantallas muy chicas */
+    .nav-link {
+        font-size: 0.9rem; 
+    }
 }

@@ -1,4 +1,11 @@
+html, body { /*Formato para que las páginas se ocupen completamente, empujando el pie de página al fondo*/
+    height: 100%;
+    margin: 0;
+}
+
 body { /*Formato global para el cuerpo*/
+    display: flex;
+    flex-direction: column;
     font-family: 'Century Gothic', 'Arial', sans-serif;
     background-color: #c9e4ca;
     font-size: 1.1rem;
@@ -24,24 +31,60 @@ a {/*Formato global para vínculos*/
     color: white;
 }
 
-.tabla-materias { /*Formato tabla página de inicio */
+footer { /*Formato para pie de página*/
+    background-color: #87bba2;
+    padding: 0.5rem 2rem; 
+    text-align: right; 
+    color: white;
+    margin-top: auto;
+}
+
+.tabla-materias { /* Formato tabla página de inicio */
     margin: 2rem auto;
     border-spacing: 0;
     border: 2px solid #3b6064;
     text-align: center;
 }
 
-.tabla-materias th, .tabla-materias td { /*Bordes y espaciado internos */
+.tabla-materias th, .tabla-materias td { /* Bordes y espaciado internos */
     border: 1.5px solid #3b6064; 
     padding: 0.75rem 1rem; 
 }
 
-/* Optional: style header row different color */
-.tabla-materias th {
+.tabla-materias th { /* Formato 1er fila */
     background-color: #55828b;
     color: white;
     font-weight: bold;
 }
+
+.container-parrafo { /* Container centrado con borde */
+    width: 80%; 
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 2px solid #3b6064;
+    padding: 1rem;
+}
+
+.container-sobremi {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.foto { /* Formato foto personal */
+    width: 35%; 
+    height: auto; 
+    margin: 2rem;
+}
+
+
+@media (max-width: 768px) { /* Adaptar foto para pantallas chicas */
+    .foto img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
 
 @media (max-width: 768px) { /* Adaptar texto de cuerpo para pantallas chicas */
     body {
@@ -49,20 +92,9 @@ a {/*Formato global para vínculos*/
     }
 }
 
-@media (max-width: 480px) { /* Adaptar texto de cuerpo para pantallas muy chicas */
-    body {
-        font-size: 0.8rem; 
-    }
-}
 
 @media (max-width: 768px) { /* Adaptar texto de navegador para pantallas chicas */
     .nav-link {
         font-size: 1rem; 
-    }
-}
-
-@media (max-width: 480px) { /* Adaptar texto de navegador para pantallas muy chicas */
-    .nav-link {
-        font-size: 0.9rem; 
     }
 }
